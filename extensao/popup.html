@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    body {
+      background-color: #1b1b1b;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 300px;
+      width: 200px;
+      color: white;
+    }
+
+    .container {
+      border: 1px solid #ccc;
+      padding: 30px 20px;
+      text-align: center;
+      width: 300px;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #ccc;
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+
+    .power-button {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 30px;
+      background-color: #1b1b1b;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .power-button:hover {
+      background-color: #2c2c2c;
+      transform: scale(1.05);
+    }
+
+    .power-button svg {
+      width: 40px;
+      height: 40px;
+      fill: #ccc;
+    }
+
+    .access-btn {
+      border: 1px solid #ccc;
+      padding: 10px 20px;
+      background: transparent;
+      color: #ccc;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .access-btn:hover {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>TERM BREAKER</h1>
+
+    <div class="power-button">
+      <svg viewBox="0 0 512 512">
+        <path d="M256 0C238.3 0 224 14.3 224 32V288C224 305.7 238.3 320 256 320C273.7 320 288 305.7 288 288V32C288 14.3 273.7 0 256 0zM388.4 108.4C374.2 94.2 352.5 94.2 338.3 108.4C324.1 122.6 324.1 144.3 338.3 158.5C381.3 201.5 381.3 278.5 338.3 321.5C295.3 364.5 218.3 364.5 175.3 321.5C132.3 278.5 132.3 201.5 175.3 158.5C189.5 144.3 189.5 122.6 175.3 108.4C161.1 94.2 139.4 94.2 125.2 108.4C56.6 177 56.6 303 125.2 371.6C193.8 440.2 318.2 440.2 386.8 371.6C455.4 303 455.4 177 386.8 108.4H388.4z"/>
+      </svg>
+    </div>
+
+    <button class="access-btn">Acessar Página</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
+
