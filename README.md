@@ -121,8 +121,4 @@ Este projeto é open‑source sob a [MIT License](LICENSE).
 
 ---
 
-## 🎯 Contato
-
-Matheus Lobo – [lobomatheusc@gmail.com](mailto:lobomatheusc@gmail.com)
-
 Project link: [https://github.com/QTelesGabriel/Hackathon](https://github.com/QTelesGabriel/Hackathon)
