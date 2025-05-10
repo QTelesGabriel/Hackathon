@@ -1,0 +1,121 @@
+:root {
+    --bg: #1a1a1a;
+    --card-bg: #2a2a2a;
+    --text: #ffffff;
+    --muted: #cccccc;
+    --accent: #00ff00;
+    --success: #52c41a;
+    --warning: #ffa500;
+    --danger: #ff4d4f;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: sans-serif;
+    line-height: 1.5;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  /* === HEADER === */
+  .analysis-header h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+  .analysis-header .last-analysis {
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+  
+  /* === SCORE === */
+  .analysis-score {
+    padding: 20px 0;
+  }
+  .score-box {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .score-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+  }
+  .score-text {
+    font-size: 2rem;
+    color: var(--accent);
+  }
+  
+  /* === FINDINGS === */
+  .findings h2 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+  }
+  .findings-list {
+    list-style: none;
+  }
+  .finding-item {
+    background: var(--card-bg);
+    padding: 12px 16px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 12px;
+  }
+  .dot.green { background: var(--success); }
+  .dot.yellow { background: var(--warning); }
+  .dot.red { background: var(--danger); }
+  
+  .finding-text {
+    flex: 1;
+    color: var(--text);
+  }
+  .finding-status.green { color: var(--success); font-weight: bold; }
+  .finding-status.yellow { color: var(--warning); font-weight: bold; }
+  .finding-status.red { color: var(--danger); font-weight: bold; }
+  
+  /* === BACK BUTTON === */
+  .btn-back {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 10px 20px;
+    background: var(--card-bg);
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .btn-back:hover {
+    opacity: 0.8;
+  }
+  

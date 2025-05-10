@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Análise Completa</title>
+  <link rel="stylesheet" href="style_analysis.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="analysis-header">
+    <div class="container">
+      <!-- vamos colocar um span para podermos atualizar só a parte dinâmica -->
+      <h1>
+        Análise Completa de 
+        <span id="full-site-name">example.com</span>
+      </h1>
+      <p class="last-analysis">
+        Última análise realizada em: 
+        <span id="full-last-analysis">10/05/2025</span>
+      </p>
+    </div>
+  </header>
+
+  <!-- SCORE -->
+  <section class="analysis-score">
+    <div class="container">
+      <div class="score-box">
+        <div id="full-score-circle" class="score-circle">2</div>
+        <div id="full-score-text" class="score-text">Sem risco</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINDINGS -->
+  <section class="findings">
+    <div class="container">
+      <h2>O que encontramos</h2>
+      <ul id="full-findings-list" class="findings-list">
+        <!-- os <li> serão gerados dinamicamente -->
+      </ul>
+      <a href="webpage.html" class="btn-back">Voltar às Análises Recentes</a>
+    </div>
+  </section>
+
+  <!-- 1) mockData -->
+  <script src="mockData.js"></script>
+  <!-- 2) script de preenchimento -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const full = window.mockFullAnalysis;
+
+      // Header
+      document.getElementById('full-site-name').textContent     = full.site;
+      document.getElementById('full-last-analysis').textContent = full.lastAnalysis;
+
+      // Score
+      document.getElementById('full-score-circle').textContent = full.score;
+      document.getElementById('full-score-text').textContent   = full.term;
+
+      // Findings
+      const ul = document.getElementById('full-findings-list');
+      full.findings.forEach(f => {
+        const li = document.createElement('li');
+        li.className = 'finding-item';
+        li.innerHTML = `
+          <span class="dot ${f.color}"></span>
+          <span class="finding-text">${f.label}</span>
+          <span class="finding-status ${f.color}">${f.status}</span>
+        `;
+        ul.appendChild(li);
+      });
+    });
+  </script>
+
+</body>
+</html>

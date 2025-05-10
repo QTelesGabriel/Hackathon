@@ -1,0 +1,181 @@
+/* === Variáveis de cor === */
+:root {
+    --bg: #1a1a1a;
+    --card-bg: #2a2a2a;
+    --text: #ffffff;
+    --muted: #cccccc;
+    --accent: #00ff00;
+    --danger: #ff4d4f;
+    --warning: #ffa500;
+    --success: #52c41a;
+  }
+  
+  /* === Reset mínimo === */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: sans-serif;
+    line-height: 1.5;
+  }
+  
+  /* === Container centralizado === */
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  /* === Botões === */
+  .btn {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity .2s;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #000;
+  }
+  .btn-secondary {
+    background: var(--card-bg);
+    color: var(--text);
+    border: 1px solid var(--muted);
+  }
+  .btn:hover {
+    opacity: .8;
+  }
+  
+  /* === Hero === */
+  .hero {
+    text-align: center;
+    padding: 80px 0 100px;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+  .hero .subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+  }
+  .hero .description {
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+  
+  /* === Quick Analysis === */
+  .quick-analysis h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  .analyze-box {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .analyze-box input {
+    flex: 1;
+    padding: 12px;
+    background: var(--card-bg);
+    border: 1px solid var(--muted);
+    border-radius: 4px;
+    color: var(--text);
+  }
+  .analyze-box input::placeholder {
+    color: var(--muted);
+  }
+  .result-box {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 4px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+  .result-box .score {
+    font-size: 1.5rem;
+  }
+  .result-box .score span {
+    color: var(--accent);
+    font-size: 2rem;
+    margin-left: 4px;
+  }
+  .result-box .term span {
+    color: var(--success);
+    font-weight: bold;
+    margin-left: 4px;
+  }
+  
+  /* === Features / Como Funciona === */
+  .features {
+    background: #111;
+  }
+  .features .container {
+    text-align: center;
+  }
+  .features h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  .cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  .card {
+    background: var(--card-bg);
+    flex: 1;
+    padding: 20px;
+    border-radius: 4px;
+  }
+  .card strong {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 12px;
+  }
+  .card p {
+    color: var(--muted);
+  }
+  
+  /* === Recent Analyses === */
+  .recent-analyses h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  .recent-analyses table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .recent-analyses th,
+  .recent-analyses td {
+    padding: 12px 8px;
+    text-align: left;
+  }
+  .recent-analyses thead th {
+    background: var(--card-bg);
+    border-bottom: 2px solid var(--muted);
+  }
+  .recent-analyses tbody tr + tr td {
+    border-top: 1px solid #333;
+  }
+  .recent-analyses td a {
+    color: var(--text);
+    text-decoration: underline;
+    font-size: .9rem;
+  }
+  
+  /* Cores específicas de valor */
+  .danger { color: var(--danger); }
+  .warning { color: var(--warning); }
+  .success { color: var(--success); }
+  
